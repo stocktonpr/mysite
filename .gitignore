@@ -1,0 +1,9 @@
+# Misc
+*.log
+npm-debug.*
+.env
+.cache
+
+# Node modules and output
+node_modules
+_site
