@@ -7,7 +7,7 @@ const tailwindcss =require ("tailwindcss");
 
 module.exports = function (eleventyConfig) {
   // eleventyConfig.addPassthroughCopy("./src/styles/styles.css");
-  eleventyConfig.addPassthroughCopy("./src/images/");
+  eleventyConfig.addPassthroughCopy("./src/img/");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy({ "./src/favicon/": "/" });
   eleventyConfig.addFilter("postDate", (dateObj) => {
@@ -25,7 +25,9 @@ module.exports = function (eleventyConfig) {
         });
     });
   });
-  eleventyConfig.addWatchTarget("./src/styles/");
+  eleventyConfig.setServerOptions({
+    watch: ["_site/**/*.css"]
+  });
 
   return {
     markdownTemplateEngine: "njk",
