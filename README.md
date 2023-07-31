@@ -1,2 +1,1 @@
-# eleventy-starter
-# mysite
+mysite
