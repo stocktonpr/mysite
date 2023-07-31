@@ -6,4 +6,3 @@ npm-debug.*
 
 # Node modules and output
 node_modules
-_site/css/*
