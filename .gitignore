@@ -4,5 +4,5 @@ npm-debug.*
 .env
 .cache
 
-# Node modules and output
+# Node modules
 node_modules
