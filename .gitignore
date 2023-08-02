@@ -6,3 +6,4 @@ npm-debug.*
 
 # Node modules
 node_modules
+_site
