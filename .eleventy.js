@@ -3,10 +3,10 @@ const autoprefixer = require("autoprefixer");
 const cssnano = require("cssnano");
 const fs = require("fs");
 const postcss = require("postcss");
-const tailwindcss =require ("tailwindcss");
+const tailwindcss = require("tailwindcss");
 
 module.exports = function (eleventyConfig) {
-  // eleventyConfig.addPassthroughCopy("./src/styles/styles.css");
+  eleventyConfig.addWatchTarget("./src/_data/");
   eleventyConfig.addPassthroughCopy("./src/img/");
   eleventyConfig.addPassthroughCopy("./src/fonts");
   eleventyConfig.addPassthroughCopy({ "./src/favicon/": "/" });
@@ -26,7 +26,7 @@ module.exports = function (eleventyConfig) {
     });
   });
   eleventyConfig.setServerOptions({
-    watch: ["_site/**/*.css"]
+    watch: ["_site/**/*.css"],
   });
 
   return {

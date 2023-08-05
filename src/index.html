@@ -3,21 +3,24 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>tailw</title>
+    <title>tailwind</title>
     <link rel="stylesheet" href="/css/styles.css" />
   </head>
-  <body class="bg-gray-300">
+  <body class="bg-gray-100">
     <div class="flex bg-gray-100">
       <div
-        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12">
+        class="px-8 py-12 max-w-md mx-auto sm:max-w-xl lg:max-w-full lg:w-1/2 lg:py-24 lg:px-12"
+      >
         <div class="xl:max-w-lg xl:ml-auto">
           <img class="h-10" src="/img/logo.svg" alt="Workcation" />
           <img
             class="mt-6 sm:mt-8 rounded-lg shadow-xl sm:h-64 sm:w-full sm:object-cover sm:object-center lg:hidden"
             src="/img/beach-work.jpg"
-            alt="Woman workcationing at the beach" />
+            alt="Woman workcationing at the beach"
+          />
           <h1
-            class="mt-6 sm:mt-8 text-2xl sm:text-4xl lg:text-3xl font-bold text-gray-800 leading-tight xl:text-4xl">
+            class="mt-6 sm:mt-8 text-2xl sm:text-4xl lg:text-3xl font-bold text-gray-800 leading-tight xl:text-4xl"
+          >
             You can work from anywhere. <br class="hidden lg:inline" />
             <span class="text-indigo-500">Take advantage of it.</span>
           </h1>
@@ -27,11 +30,7 @@
             on vacation
           </p>
           <div class="mt-4 sm:mt-6">
-            <a
-              href="#"
-              class="inline-block bg-indigo-500 text-white px-4 py-2 rounded-lg shadow-lg uppercase tracking-wide text-sm sm:text-base font-semibold">
-              Book your escape</a
-            >
+            <a href="#" class="btn sm:text-base"> Book your escape</a>
           </div>
         </div>
       </div>
@@ -39,8 +38,44 @@
         <img
           class="absolute inset-0 h-full w-full object-cover object-center"
           src="/img/beach-work.jpg"
-          alt="Woman workcationing at the beach" />
+          alt="Woman workcationing at the beach"
+        />
       </div>
     </div>
+
+    <!-- CARDS -->
+    <section class="flex antialiased text-gray-900">
+      <div class="bg-white max-w-md rounded-lg border overflow-hidden mx-auto">
+        <img src="img/miami.jpg" alt="malibu property" />
+        <div class="p-6">
+          <div class="flex items-baseline">
+            <span
+              class="inline-block bg-teal-200 text-teal-800 px-2 rounded-full text-xs uppercase tracking-wide font-semibold"
+              >New</span
+            >
+            <div
+              class="text-gray-600 ml-2 text-xs uppercase tracking-wide font-semibold"
+            >
+              {{ propertyList.property1.beds }} beds &bull; {{
+              propertyList.property1.baths }} baths
+            </div>
+          </div>
+          <h4 class="font-semibold text-lg leading-tight truncate">
+            {{ propertyList.property1.name }}
+          </h4>
+          <div class="mt-1">
+            {{ propertyList.property1.price }}
+            <span class="text-gray-600 text-sm">/ wk</span>
+          </div>
+          <div class="mt-2 flex items-center">
+            {% include 'partials/4star.njk' %}
+            <span class="text-gray-600 text-sm ml-2">
+              {{propertyList.property1.reviewCount }} reviews</span
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="mt-6"></section>
   </body>
 </html>
